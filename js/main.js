@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $('div').click(function () {
+  $('.police').click(function () {
     /*TROUVER COMMENT DESIGNER LE CHILD*/
     $(this).animate({height:'300px'}, 1000);
-    $(this).css('whiteSpace', 'initial');
+    /*
     $(this).css('whiteSpace', 'initial');
   	$(this).css('overflowY', 'auto');
-    $(this).css('overflowX', 'hidden');
+    $(this).css('overflowX', 'hidden');*/
     $('.bande').show();
     /*$(this > '.infos' > 'p:last').append("Si la Plain est si fluide, c'est grâce à un dessin qui n'est ni contrainte pas une approche géométrique ni structurée par la singularité de la ligne. Les glyphes sont designés optiquement, comme des surfaces pleines et, sous l'apparence d'une moderne simplicité, leur interaction dynamique crée une indentité distincte.");*/
   });
