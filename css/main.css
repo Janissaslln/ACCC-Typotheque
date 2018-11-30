@@ -1,0 +1,219 @@
+@font-face {
+  font-family: Plain;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../Plain-Regular.woff2')
+}
+
+@font-face {
+  font-family: AGRounded;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../AGBookRounded-BoldOutline.woff2')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  --main-bg-color: #ccc;
+  --main-border-color: #f00;
+  --main-border-style: var(--main-border-color) solid 1px;
+  --main-text-color: #f00;
+}
+
+html {
+	background-color: var(--main-bg-color);
+	box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+	background-color: var(--main-border-color);
+	color: var(--main-bg-color);
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+body {
+  font-family: Plain;
+  font-size: 1em;
+  font-weight: normal;
+  color: var(--main-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  height: 45px;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 1.5%;
+  font-family: Plain, Arial, sans-serif;
+  font-weight: normal;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  border-bottom: var(--main-border-style);
+}
+
+
+h1 {
+	font-size: 2em;
+  float: left;
+  width: 40%;
+}
+
+.menu {
+	font-size: 1em;
+	list-style-type: none;
+	width: 25%;
+  float: right;
+}
+
+.logo {
+  position: fixed;
+}
+
+#systemD {
+  height: 50px;
+}
+
+.police {
+	height: 130px;
+  border-bottom: var(--main-border-style);
+}
+
+/*test pour enlever le scroll*/
+
+.modifiable {
+	display: inline-block;
+	width: calc(75% - 1px);
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	color: var(--main-bg-color);
+	background-color: var(--main-bg-color);
+  /* Will override color (regardless of order)
+	-webkit-text-fill-color: #808080; */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--main-border-color);
+	white-space: nowrap;
+  /* même effet mais system D
+	color: #808080;
+	background-color: #808080;
+	text-shadow:
+   -1px -1px 0 #000,
+  	1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+	*/
+  overflow-x: auto;
+	overflow-y: hidden;
+  /*le texte ne s'écoule pas par la droite mais par le bas*/
+  border-right: var(--main-border-style);
+	/*Transition douce*/
+	-o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  transition:1s;
+}
+
+.modifiable:hover {
+	color: black;
+	background-color: white;
+	-webkit-text-stroke-width: 0px;
+}
+
+/*Pour enlever l'outline de sélection, ne marche pas avec Safari*/
+.modifiable:focus {
+  outline-width: 0;
+}
+
+#plain {
+  font-family: Plain;
+  font-style: normal;
+  font-size: 7em;
+}
+
+#helvetica {
+  font-family: Helvetica;
+  font-size: 7em;
+  /*trouver comment rajouter de la marge supérieur, ou descendre la base line*/
+}
+
+#times {
+  font-family: Times;
+  font-size: 7em;
+}
+
+#AGRounded {
+	font-family: AGRounded;
+	font-size: 7em;
+}
+
+.infos {
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	box-sizing: border-box;
+	float: right;
+  background-color: var(--main-bg-color);
+  padding-top: 10px;
+  padding-left: 15px;
+  color: var(--main-text-color);
+  font-family: Plain;
+}
+
+h3 {
+	font-size: 1em;
+	padding-bottom: 10px;
+}
+
+.bande {
+  display: none;
+  height: 60px;
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  list-style-type: none;
+  list-style: none;
+}
+
+.bande li{
+  font: inherit;
+  font-size: 1em;
+  display: inline;
+  margin-top: 20px;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  border-radius: 35%;
+  border: var(--main-border-style);
+}
+
+footer {
+	height: 35px;
+	width: 90%;
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-family: Plain, sans-serif;
+	font-size: 1em;
+	padding-left: 5%;
+	padding-top: 15px;
+	padding-right: 5%;
+}
+
+.contact {
+	list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
